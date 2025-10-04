@@ -18,7 +18,7 @@ export const Authority = () => {
             </p>
             
             <p className="text-lg text-foreground/90 leading-relaxed">
-              Hoje, Tamires aplica esse conhecimento na consultoria de carreira, ajudando profissionais a destravarem oportunidades e atingirem seus objetivos com <span className="font-bold text-[hsl(var(--pasja-gold-dark))]">clareza, confiança e resultados reais</span>.
+              Hoje, aplica essa vivência em consultorias de carreira completas, ajudando profissionais a reposicionarem seus currículos e perfis no LinkedIn com <span className="font-bold text-[hsl(var(--pasja-gold-dark))]">clareza, confiança e resultados reais</span>.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 pt-6">

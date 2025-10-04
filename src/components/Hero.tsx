@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import tamiresHero from "@/assets/tamires-hero.png";
 import dragonflyIcon from "@/assets/dragonfly-icon.png";
 
-const CHECKOUT_URL = "https://pay.kiwify.com.br/exemplo-checkout";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/iakctCj";
 
 export const Hero = () => {
   return (
@@ -20,12 +20,12 @@ export const Hero = () => {
             <div className="flex items-center gap-3">
               <img src={dragonflyIcon} alt="Ícone libélula dourada" className="w-12 h-12 animate-pulse" />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Destrave seu currículo com estratégia.
+                Reposicione sua imagem profissional de ponta a ponta.
               </h1>
             </div>
             
             <p className="text-xl md:text-2xl text-white/95 leading-relaxed font-medium">
-              Análise personalizada feita por quem já recrutou para Michelin, Ipiranga e Globo.
+              Currículo e LinkedIn analisados com estratégia e feedback personalizado de quem já recrutou para Michelin, Ipiranga e Globo.
             </p>
             
             <Button 
@@ -34,7 +34,7 @@ export const Hero = () => {
               className="group"
               onClick={() => window.open(CHECKOUT_URL, '_blank')}
             >
-              Quero analisar meu currículo
+              Quero o combo completo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             

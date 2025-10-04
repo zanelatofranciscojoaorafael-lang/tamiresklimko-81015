@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Users } from "lucide-react";
 import dragonflyIcon from "@/assets/dragonfly-icon.png";
 
-const CHECKOUT_URL = "https://pay.kiwify.com.br/exemplo-checkout";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/iakctCj";
 
 export const FinalCTA = () => {
   return (
@@ -23,7 +23,7 @@ export const FinalCTA = () => {
           </h2>
           
           <p className="text-xl text-white/95 leading-relaxed max-w-2xl mx-auto">
-            Para garantir qualidade e dedicação em cada análise, Tamires realiza um número limitado de atendimentos por semana. Após o limite, novas solicitações entram em lista de espera.
+            Para garantir qualidade e dedicação em cada análise completa, Tamires realiza um número limitado de atendimentos por semana. Garanta sua análise antes que as vagas da semana acabem.
           </p>
           
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto border border-white/20">
@@ -46,27 +46,31 @@ export const FinalCTA = () => {
               className="w-full group bg-[hsl(var(--pasja-gold))] hover:bg-[hsl(var(--pasja-gold-dark))]"
               onClick={() => window.open(CHECKOUT_URL, '_blank')}
             >
-              Garantir minha análise agora
+              Quero o combo completo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <p className="text-white/80 text-sm mt-4">
-              Seu currículo merece o olhar de uma especialista que entende o que o mercado procura.
+              Sua imagem profissional merece o olhar de uma especialista que entende o que o mercado procura.
             </p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 pt-8 text-white/90">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[hsl(var(--pasja-gold))] rounded-full"></div>
-              <span>Feedback personalizado em PDF</span>
+              <span>Análise Currículo + LinkedIn</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[hsl(var(--pasja-gold))] rounded-full"></div>
-              <span>eBook exclusivo grátis</span>
+              <span>Áudio exclusivo da Tamires</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-[hsl(var(--pasja-gold))] rounded-full"></div>
-              <span>Apenas R$ 197</span>
+              <span>eBook completo incluído</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[hsl(var(--pasja-gold))] rounded-full"></div>
+              <span>Apenas R$ 297</span>
             </div>
           </div>
         </div>

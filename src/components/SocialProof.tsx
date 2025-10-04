@@ -3,17 +3,17 @@ import { Star, Shield } from "lucide-react";
 export const SocialProof = () => {
   const testimonials = [
     {
-      text: "Com a análise da Tamires, meu currículo finalmente começou a gerar entrevistas!",
+      text: "Com a análise da Tamires, meu currículo e LinkedIn finalmente começaram a gerar entrevistas!",
       author: "Mariana S.",
       role: "Analista de Marketing"
     },
     {
-      text: "Recebi um feedback detalhado e já fui chamada para dois processos.",
+      text: "Recebi um feedback detalhado em PDF e áudio. Já fui chamada para dois processos.",
       author: "Carlos R.",
       role: "Gerente Comercial"
     },
     {
-      text: "O eBook é direto e fácil de aplicar, recomendo demais.",
+      text: "O combo completo transformou minha presença online. Recomendo demais!",
       author: "Ana Paula M.",
       role: "Coordenadora de RH"
     }
@@ -25,7 +25,7 @@ export const SocialProof = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Profissionais que já transformaram seus currículos
+              Profissionais que já transformaram suas carreiras
             </h2>
             <div className="w-24 h-1 bg-[hsl(var(--pasja-gold))] mx-auto rounded-full"></div>
           </div>

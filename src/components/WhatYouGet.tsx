@@ -1,26 +1,31 @@
 import { Button } from "@/components/ui/button";
-import { FileText, Search, BookOpen, ArrowRight } from "lucide-react";
+import { FileText, Search, BookOpen, Mic, ArrowRight } from "lucide-react";
 import mockupCurriculo from "@/assets/mockup-curriculo.jpg";
 import dragonflyIcon from "@/assets/dragonfly-icon.png";
 
-const CHECKOUT_URL = "https://pay.kiwify.com.br/exemplo-checkout";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/iakctCj";
 
 export const WhatYouGet = () => {
   const benefits = [
     {
       icon: FileText,
-      title: "Feedback em PDF completo",
-      description: "Melhorias e ajustes estratégicos personalizados para o seu currículo."
+      title: "Análise estratégica de Currículo",
+      description: "Feedback em PDF com melhorias, ajustes e estruturação profissional."
     },
     {
       icon: Search,
-      title: "Diagnóstico detalhado",
-      description: "Descubra o que está impedindo seu currículo de gerar convites para entrevistas."
+      title: "Análise de LinkedIn",
+      description: "Revisão completa do seu perfil, com sugestões práticas para aumentar sua visibilidade e atrair recrutadores."
+    },
+    {
+      icon: Mic,
+      title: "Áudio exclusivo da Tamires Klimko",
+      description: "Feedback em voz, personalizado e direto sobre o seu currículo e LinkedIn."
     },
     {
       icon: BookOpen,
-      title: "eBook exclusivo incluído",
-      description: "Orientações práticas para montar um currículo claro, atrativo e alinhado ao mercado."
+      title: "eBook completo de Carreira",
+      description: "Orientações práticas para alinhar currículo e LinkedIn de forma coerente e estratégica."
     }
   ];
 
@@ -31,15 +36,15 @@ export const WhatYouGet = () => {
       <img src={dragonflyIcon} alt="" className="absolute bottom-20 left-10 w-16 h-16 opacity-5 -rotate-12" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            O que está incluso na sua análise
-          </h2>
-          <div className="w-24 h-1 bg-[hsl(var(--pasja-gold))] mx-auto rounded-full"></div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Essa análise não é modelo pronto — é estratégia feita sob medida pra você sair da invisibilidade.
-          </p>
-        </div>
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              O que você recebe na sua análise completa
+            </h2>
+            <div className="w-24 h-1 bg-[hsl(var(--pasja-gold))] mx-auto rounded-full"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Essa análise não é modelo pronto — é sob medida pra você sair da invisibilidade.
+            </p>
+          </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Benefits */}
@@ -78,18 +83,18 @@ export const WhatYouGet = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button 
-            variant="gold"
-            size="xl"
-            className="group"
-            onClick={() => window.open(CHECKOUT_URL, '_blank')}
-          >
-            Quero meu currículo destravado
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <p className="mt-4 text-sm text-muted-foreground">
-            💳 Pagamento seguro • 🔒 Satisfação garantida
-          </p>
+            <Button 
+              variant="gold"
+              size="xl"
+              className="group"
+              onClick={() => window.open(CHECKOUT_URL, '_blank')}
+            >
+              Quero o combo completo
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <p className="mt-4 text-sm text-muted-foreground">
+              💳 Pagamento seguro • 🔒 Satisfação garantida • Apenas R$ 297
+            </p>
         </div>
       </div>
     </section>
