@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import tamiresHero from "@/assets/tamires-hero.png";
+import tamiresHero from "@/assets/tamires-hero.jpeg";
 import dragonflyIcon from "@/assets/dragonfly-icon.png";
 
 const CHECKOUT_URL = "https://pay.kiwify.com.br/iakctCj";
