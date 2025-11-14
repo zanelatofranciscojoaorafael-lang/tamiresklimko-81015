@@ -1,6 +1,8 @@
 import { Star, Shield } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const SocialProof = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const testimonials = [
     {
       text: "Com a análise da Tamires, meu currículo e LinkedIn finalmente começaram a gerar entrevistas!",
@@ -21,9 +23,9 @@ export const SocialProof = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4" ref={ref}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
+          <div className={`text-center mb-16 space-y-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Profissionais que já transformaram suas carreiras
             </h2>
@@ -34,7 +36,8 @@ export const SocialProof = () => {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-[hsl(var(--muted))] to-white rounded-2xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1"
+                className={`bg-gradient-to-br from-[hsl(var(--muted))] to-white rounded-2xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-all duration-700 hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="flex gap-1 mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (

@@ -1,10 +1,13 @@
 import { Building2, Users, Award } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const Authority = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
     <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+      <div className="container mx-auto px-4" ref={ref}>
+        <div className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Quem é Tamires Klimko?

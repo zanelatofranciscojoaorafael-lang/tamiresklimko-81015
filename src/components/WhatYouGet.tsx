@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { FileText, Search, BookOpen, Mic, ArrowRight } from "lucide-react";
 import mockupCurriculo from "@/assets/mockup-curriculo.jpg";
 import dragonflyIcon from "@/assets/dragonfly-icon.png";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const CHECKOUT_URL = "https://pay.kiwify.com.br/iakctCj";
 
 export const WhatYouGet = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const benefits = [
     {
       icon: FileText,
@@ -35,8 +37,8 @@ export const WhatYouGet = () => {
       <img src={dragonflyIcon} alt="" className="absolute top-10 right-10 w-20 h-20 opacity-5 rotate-12" />
       <img src={dragonflyIcon} alt="" className="absolute bottom-20 left-10 w-16 h-16 opacity-5 -rotate-12" />
       
-      <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 space-y-4">
+      <div className="container mx-auto px-4 relative z-10" ref={ref}>
+          <div className={`text-center mb-16 space-y-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               O que você recebe na sua análise completa
             </h2>
@@ -52,10 +54,10 @@ export const WhatYouGet = () => {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <div 
+                 <div 
                   key={index}
-                  className="bg-white rounded-2xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:scale-105 flex gap-4"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className={`bg-white rounded-2xl p-6 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-card)] transition-all duration-700 hover:scale-105 flex gap-4 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 rounded-xl bg-[hsl(var(--pasja-gold))]/20 flex items-center justify-center">
@@ -72,7 +74,7 @@ export const WhatYouGet = () => {
           </div>
           
           {/* Mockup image */}
-          <div className="relative">
+          <div className={`relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="absolute -inset-4 bg-gradient-to-r from-[hsl(var(--pasja-blue))] to-[hsl(var(--pasja-gold))] rounded-3xl blur-2xl opacity-20"></div>
             <img 
               src={mockupCurriculo} 
