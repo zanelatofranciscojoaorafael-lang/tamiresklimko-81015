@@ -1,18 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Users } from "lucide-react";
 import dragonflyIcon from "@/assets/dragonfly-icon.png";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const CHECKOUT_URL = "https://pay.kiwify.com.br/iakctCj";
 
 export const FinalCTA = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  
   return (
     <section className="py-20 bg-gradient-to-br from-[hsl(var(--pasja-blue))] to-[hsl(204,40%,70%)] relative overflow-hidden">
       {/* Decorative dragonflies */}
       <img src={dragonflyIcon} alt="" className="absolute top-10 left-10 w-24 h-24 opacity-10 animate-pulse" />
       <img src={dragonflyIcon} alt="" className="absolute bottom-10 right-10 w-32 h-32 opacity-10 animate-pulse" style={{ animationDelay: '1s' }} />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="container mx-auto px-4 relative z-10" ref={ref}>
+        <div className={`max-w-4xl mx-auto text-center space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full">
             <Clock className="w-5 h-5" />
             <span className="font-semibold">Vagas limitadas por semana</span>
